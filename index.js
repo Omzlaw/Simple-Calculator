@@ -136,13 +136,12 @@ function calculate() {
             break;
         case '-':
             subtract(operand1, operand2)
-            break;
+            break
         case '/':
             divide(operand1, operand2)
-            break;
+            break
         case '*':
             multiply(operand1, operand2)
-            break;
+            break
     }
-    
 }
