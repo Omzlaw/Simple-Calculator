@@ -90,7 +90,6 @@ function displayOnScreen(text) {
 function determineOperands() {
     // checkForOperationContd()
     operand1 = screen.innerHTML
-    console.log(operand1);
     nextOperand = true;
 }
 
