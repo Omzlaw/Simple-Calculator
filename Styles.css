@@ -1,0 +1,21 @@
+#Screen {
+    background-color: darkgray;
+    height: 6rem;
+    width: 24.7rem;
+}
+
+.center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+button {
+    height: 5rem;
+    width: 6rem;
+
+}
+
+#TextOnScreen {
+    float: right;
+    margin-right: 1rem;
+}
