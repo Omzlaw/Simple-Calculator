@@ -28,6 +28,9 @@ buttons.forEach(button => button.addEventListener("click", function(e) {
         case '=':
             calculate()
             break;
+        case '.':
+            operator = '.'
+            break;
         case '+':
             nextOperand = true
             operator = '+'
@@ -61,6 +64,13 @@ function clearScreen() {
     nextOperand = false;
 }
 
+function deleteLastElement() {
+    let str = screen.innerHTML
+    str = str.slice(0, -1)
+    console.log(str);
+    screen.innerHTML = str
+}
+
 function displayOnScreen(text) {
     if(screen.innerHTML == text && text == '.'){
         screen.innerHTML = '.'
@@ -71,14 +81,14 @@ function displayOnScreen(text) {
     
 }
 
-function checkForOperationContd() {
-    if(operand1 != '' && operand2 != ''){
-        calculate()
-    }
-}
+// function checkForOperationContd() {
+//     if(operand1 != '' && operand2 != '' && operator != '.'){
+//         calculate()
+//     }
+// }
 
 function determineOperands() {
-    checkForOperationContd()
+    // checkForOperationContd()
     operand1 = screen.innerHTML
     console.log(operand1);
     nextOperand = true;
@@ -134,4 +144,5 @@ function calculate() {
             multiply(operand1, operand2)
             break;
     }
+    
 }
