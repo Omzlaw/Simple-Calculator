@@ -95,7 +95,20 @@ function displayOnScreen(text) {
     
 }
 
+function fade() {
+    screen.style.visibility = "hidden"
+    setTimeout(function(){
+        screen.style.visibility = "visible"
+        }, 150);
+}
+
+function autoCalculate() {
+    
+}
+
 function determineOperands() {
+    fade()
+    autoCalculate()
     operand1 = screen.innerHTML
     nextOperand = true;
 }
