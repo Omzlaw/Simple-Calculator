@@ -12,6 +12,7 @@ let nextOperand = false;
 let restart = true;
 let newCalculation = true;
 let increment;
+let negation = false;
 
 screen.innerHTML = operand1
 
@@ -61,10 +62,14 @@ buttons.forEach(button => button.addEventListener("click", function(e) {
         case 'del':
             deleteLastElement()
             break;
+        case 'negation':
+            setNegation()
+            break;
     }
 }))
 
 function clearScreen() {
+    fade()
     restart = true
     screen.innerHTML = '0'
     operand1 = 0
@@ -85,6 +90,26 @@ function deleteLastElement() {
     }
 }
 
+function setNegation() {
+    let num = parseFloat(screen.innerHTML)
+    if(negation == false)
+    {
+        num = -num
+        screen.innerHTML = num
+        negation = true
+        restart = true
+        operand1 = 0
+        operand2 = ''
+        operator = ''
+        nextOperand = false;
+        newCalculation = true;
+    }
+    else {
+        negation = false
+        screen.innerHTML = Math.abs(num)
+    }
+}
+
 function displayOnScreen(text) {
     if(screen.innerHTML == text && text == '.'){
         screen.innerHTML = '.'
@@ -99,7 +124,7 @@ function fade() {
     screen.style.visibility = "hidden"
     setTimeout(function(){
         screen.style.visibility = "visible"
-        }, 150);
+        }, 100);
 }
 
 function autoCalculate() {
