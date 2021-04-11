@@ -58,6 +58,9 @@ buttons.forEach(button => button.addEventListener("click", function(e) {
             operator = '*'
             determineOperands()
             break;
+        case 'del':
+            deleteLastElement()
+            break;
     }
 }))
 
@@ -76,6 +79,10 @@ function deleteLastElement() {
     str = str.slice(0, -1)
     console.log(str);
     screen.innerHTML = str
+    if(screen.innerHTML == ''){
+        screen.innerHTML = '0'
+        restart = true
+    }
 }
 
 function displayOnScreen(text) {
@@ -88,14 +95,7 @@ function displayOnScreen(text) {
     
 }
 
-// function checkForOperationContd() {
-//     if(operand1 != '' && operand2 != '' && operator != '.'){
-//         calculate()
-//     }
-// }
-
 function determineOperands() {
-    // checkForOperationContd()
     operand1 = screen.innerHTML
     nextOperand = true;
 }
