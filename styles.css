@@ -20,12 +20,17 @@ button {
     margin-right: 1rem;
 }
 
+.link {
+    text-decoration: none;
+}
+
+
 .center {
     text-align: center;
     margin: 0 auto;
 }
 .shared {
-    width: 2.9rem;
+    width: 2.80rem;
 }
 
 .operator {

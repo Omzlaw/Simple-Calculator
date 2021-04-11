@@ -140,6 +140,8 @@ function calculate() {
             break;
         case '-':
             subtract(operand1, operand2)
+            console.log(operand1);
+    console.log(operand2);
             break
         case '/':
             divide(operand1, operand2)
@@ -148,4 +150,5 @@ function calculate() {
             multiply(operand1, operand2)
             break
     }
+    
 }
