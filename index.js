@@ -1,3 +1,8 @@
+// Project title: JSCulator (Simple Javascript Calculator)
+// Developer: Omeiza Alabi
+// Email: omeizaalabi@gmail.com
+// Phone: 07055830564
+
 let buttons = document.querySelectorAll('button')
 let screen = document.getElementById('TextOnScreen')
 let operator;
