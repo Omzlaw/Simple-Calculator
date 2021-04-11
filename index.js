@@ -10,6 +10,8 @@ let operand1 = 0;
 let operand2;
 let nextOperand = false;
 let restart = true;
+let newCalculation = true;
+let increment;
 
 screen.innerHTML = operand1
 
@@ -57,7 +59,6 @@ buttons.forEach(button => button.addEventListener("click", function(e) {
             determineOperands()
             break;
     }
-
 }))
 
 function clearScreen() {
@@ -67,6 +68,7 @@ function clearScreen() {
     operand2 = ''
     operator = ''
     nextOperand = false;
+    newCalculation = true;
 }
 
 function deleteLastElement() {
@@ -133,22 +135,29 @@ function displayResult(result) {
 }
 
 function calculate() {
-    operand2 = screen.innerHTML
+    if(newCalculation == true)
+    {
+        operand2 = screen.innerHTML
+        increment = operand2
+    }
+    else{
+        operand1 = screen.innerHTML
+        operand2 = increment
+    }
     switch(operator) {
         case '+':
             add(operand1, operand2)
             break;
         case '-':
             subtract(operand1, operand2)
-            console.log(operand1);
-    console.log(operand2);
             break
         case '/':
             divide(operand1, operand2)
-            break
+            break;
         case '*':
             multiply(operand1, operand2)
-            break
+            break;
     }
+    newCalculation = false
     
 }
