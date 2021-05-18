@@ -20,6 +20,11 @@ button {
     margin-right: 1rem;
 }
 
+#WorkingTree {
+    float: right;
+    margin-top: 3.8rem;
+}
+
 .link {
     text-decoration: none;
 }
