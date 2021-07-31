@@ -1,0 +1,15 @@
+{
+    "name": "JSCulator",
+    "short_name": "JSCulator",
+    "start_url": ".",
+    "background_color": "#f2bdcd",
+    "theme_color": "#ffb7c5",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "images/logo.png",
+            "type": "image/png",
+            "sizes": "200x200"
+        }
+    ]
+}
